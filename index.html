@@ -4,64 +4,167 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--=============== BOXICONS ===============-->
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
-        <!--=============== CSS ===============-->
+        <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Olavanna | Bakery</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+
+        <title>Olavanna Bakery</title>
     </head>
     <body>
-        <!--==================== HEADER ====================-->
-        <header class="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    OLAVANNA BAKERY
-                </a>
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+        
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">Olavanna Bakery</a>
 
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#products" class="nav__link">Products</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
 
-                <!-- Toggle button -->
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-grid-alt'></i>
                 </div>
             </nav>
         </header>
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home">
-                <div class="home__container container">
-                    <div class="home__data">
-                        <span class="home__subtitle">Error 404</span>
-                        <h1 class="home__title">Hey Foodie</h1>
-                        <p class="home__description">
-                            Currently we are unavailabe <br> please visit later.
-                        </p>
-                        <a href="https://www.google.com" class="home__button">
-                            Google
-                        </a>
+        <main class="l-main">
+            <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__img">
+                        <img style=" margin-top: 20px;" src="assets/img/logo.png" alt="">
                     </div>
 
-                    <div class="home__img">
-                        <img src="assets/img/ghost-img.png" alt="">
-                        <div class="home__shadow"></div>
+                    <div class="home__data">
+                        <h1 class="home__title">Olavanna, with Love in Every Bite</h1>
+                        <p class="home__description">Share the joy with Olavanna Bakery’s special mixture – a gift of flavor and tradition for your loved ones!</p>
+                        <a href="#products" class="button">Our Mixture</a>
+                    </div>   
+                </div>
+            </section>
+
+            <!--========== SHARE ==========-->
+            <section class="share section bd-container" id="about">
+                <div class="share__container bd-grid">
+                    <div class="share__data">
+                        <h2 class="section-title-center">Welcome to<br> Olavanna Bakery!</h2>
+                        <p class="share__description">Founded 10 years ago, we are a registered trademark in India, proud to offer our exclusive product, Olavanna Mixture. Crafted with care, our mixture has delighted customers across Kozhikode, Malappuram, Wayanad, Ernakulam, Thrissur, and Bengaluru.</p>
+                        <a href="#" class="button">Contact</a>
+                    </div>
+
+                    <div class="share__img">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4293/4293088.png" alt="">
                     </div>
                 </div>
-
-                <footer class="home__footer">
-                    <span>(+91) 9061224468</span>
-                    <span>|</span>
-                    <span>olavannabakery@gmail.com</span>
-                </footer>
             </section>
+
+            <!--========== DECORATION ==========-->
+            <section class="decoration section bd-container" id="products">
+                <h2 class="section-title">Olavanna Mixture<br> Crunchy, Spicy , Yummy..</h2>
+                <div class="decoration__container bd-grid">
+                    <div class="decoration__data">
+                        <img src="assets/img/4.jpeg" alt="Edavanna mixture" class="decoration__img">
+                        <h3 class="decoration__title">Crunchy Goodness!</h3>
+                    </div>
+
+                    <div class="decoration__data">
+                        <img src="assets/img/5.jpeg" alt="Edavanna mixture" class="decoration__img">
+                        <h3 class="decoration__title">Mix It Up!</h3>
+                    </div>
+
+                    <div class="decoration__data">
+                        <img src="assets/img/2.jpeg" alt="Edavanna mixture" class="decoration__img">
+                        <h3 class="decoration__title">Snack Delight!</h3>
+                    </div>
+
+                    <div class="decoration__data">
+                        <img src="assets/img/3.jpeg" alt="Edavanna mixture" class="decoration__img">
+                        <h3 class="decoration__title">Pure Flavor!</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== SEND GIFT ==========-->
+            <!-- <section class="send section" id="contact">
+                <div class="send__container bd-container bd-grid">
+                    <div class="send__content">
+                        <h2 class="section-title-center send__title">Send Gift Now</h2>
+                        <p class="send__description">Start giving away before the holidays are over. Write the home address of the person who will send the gift.</p>
+                        <form action="">
+                            <div class="send__direction">
+                                <input type="text" placeholder="House address" class="send__input">
+                                <a href="#" class="button">Send</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="send__img">
+                        <img src="assets/img/send.png" alt="">
+                    </div>
+                </div>
+            </section> -->
         </main>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
+        <!--========== FOOTER ==========-->
+        <footer class="footer section" id="contact">
+            <div class="footer__container bd-container bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        <a href="#" class="footer__logo">Olavanna Bakery</a>
+                    </h3>
+                    <p class="footer__description">with Love in Every Bite</p>
+                </div>
 
-        <!--=============== MAIN JS ===============-->
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact</h3>
+                    <ul>
+                        <li><a class="footer__link">11/23A,B, K.M.Building</a></li>
+                        <li><a class="footer__link">Palathumkuzhi, Perumanna.( Po)</a></li>
+                        <li><a class="footer__link">Calicut -19, Kerala, India</a></li>
+                        <li><a class="footer__link">olavannabakery@gmail.com</a></li>
+                        <li><a class="footer__link">(+91) 9061224468</a></li>
+                        <li><a class="footer__link">(+91) 9745599707</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Sections</h3>
+                    <ul>
+                        <li><a href="#about" class="footer__link">About </a></li>
+                        <li><a href="#products" class="footer__link">Products</a></li>
+                    </ul>
+                </div>
+<!-- 
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                </div> -->
+            </div>
+
+            <p class="footer__copy">&#169; 2024 MITCode. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>
